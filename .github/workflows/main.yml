@@ -1,5 +1,9 @@
 name: A workflow for my demo website
-on: push
+on: 
+  push:
+    paths: 
+    - './**'
+    - '!.github/**'   
 jobs:
   build-job:
     name: Hello world action
