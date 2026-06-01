@@ -1,1 +1,27 @@
+name: A workflow for my demo website
+on: 
+  workflow_dispatch: 
+env:
+  Day_of_Week: Monday
+  
+jobs:
+  example-job:
+    runs-on: ubuntu-latest
+    env:
+      Greeting: Hello
+    steps:
+    - name: print value of variables
+      run: |
+        echo "value of greeting is: ${{env.greeting}}"
+        echo "value of greeting is: $Greeting"
+        echo "value of greeting is: ${{env.repo_variable1}}"
 
+   - name: "Say Hello, it's a Monday"
+    if: ${{ env.Day_of_Week == 'Monday' }}
+    run: echo "${{env.Greeting}} ${{env.firstname}}. Today is ${{env.Day_of_Week}}"!
+    
+    env:
+      firstname: Sarika
+    
+
+      
