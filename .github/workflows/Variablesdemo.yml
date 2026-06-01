@@ -1,6 +1,6 @@
 name: A workflow for my demo website
 on: 
-  workflow_dispatch: 
+  workflow_dispatch
 env:
   Day_of_Week: Monday
   
