@@ -16,12 +16,12 @@ jobs:
         echo "value of greeting is: $Greeting"
         echo "value of greeting is: ${{env.repo_variable1}}"
 
-   - name: "Say Hello, it's a Monday"
-    if: ${{ env.Day_of_Week == 'Monday' }}
-    run: echo "${{env.Greeting}} ${{env.firstname}}. Today is ${{env.Day_of_Week}}"!
+    - name: "Say Hello, it's a Monday"
+      if: ${{ env.Day_of_Week == 'Monday' }}
+      run: echo "${{env.Greeting}} ${{env.firstname}}. Today is ${{env.Day_of_Week}}"!
     
-    env:
-      firstname: Sarika
+      env:
+        firstname: Sarika
     
 
       
