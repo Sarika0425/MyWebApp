@@ -1,6 +1,9 @@
 name: A workflow for my demo website
 on: 
-  workflow_dispatch
+  push:
+   branches:
+    main
+  
 env:
   Day_of_Week: Monday
   
