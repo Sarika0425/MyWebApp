@@ -13,9 +13,9 @@ jobs:
     steps:
     - name: print value of variables
       run: |
-        echo "value of greeting is: ${{env.greeting}}"
+        echo "value of greeting is: ${{env.Greeting}}"
         echo "value of greeting is: $Greeting"
-        echo "value of greeting is: ${{env.REPO_VARIABLE1}}"
+        echo "value of greeting is: ${{vars.REPO_VARIABLE1}}"
 
     - name: "Say Hello, it's a Monday"
       if: ${{ env.Day_of_Week == 'Monday' }}
